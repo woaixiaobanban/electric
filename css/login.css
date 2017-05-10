@@ -1,0 +1,313 @@
+/*create by BanTing*/
+html,body {
+    height:100%;
+    width:100%;
+}
+body {
+    margin: 0px;
+    font-family: "微软雅黑",sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(51, 51, 51);
+    background: -webkit-linear-gradient(#00A796, white); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#00A796, white); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#00A796, white); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#00A796, white);
+}
+input {
+    line-height: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+a {
+    color: #008f7f;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #008878;
+    text-decoration: underline;
+}
+a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+img {
+    vertical-align: middle;
+}
+p {
+    margin: 0px 0px 10px;
+}
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: rgb(249, 249, 249);
+}
+@media screen and (max-width: 767px) {
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group { margin-bottom: 15px; }
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-control:focus {
+
+
+    border:1px solid #00A796;
+}
+.form-control::-moz-placeholder {
+    color: rgb(153, 153, 153);
+    opacity: 1;
+}
+@media not all {
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.radio, .checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.radio label, .checkbox label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+}
+.btn:focus, .btn.focus, .btn:active:focus, .btn.focus:active, .btn.active:focus, .btn.active.focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+.btn:active, .btn.active {
+    outline: 0px none;
+    background-image: none;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.125) inset;
+}
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #00A796;
+    border-color: #00A796;
+}
+.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle { background-image: none; }
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+input.btn-block[type="submit"], input.btn-block[type="reset"], input.btn-block[type="button"] {
+    width: 100%;
+}
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+    border-radius: 0px;
+}
+.input-group-addon, .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: rgb(85, 85, 85);
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+}
+.input-group-addon:first-child {
+    border-right: 0px none;
+}
+
+.input-group-addon:last-child {
+    border-left: 0px none;
+}
+
+button.close {
+    padding: 0px;
+    cursor: pointer; background: transparent none repeat scroll 0% 0%; border: 0px none; }
+
+a:focus {
+    text-decoration: none;
+}
+.btn {
+    border-radius: 3px;
+    border: 0px none;
+    margin-top: 20px;
+}
+.btn:focus, .btn:active, .btn.focus, .btn:active:focus, a:focus, a:active, a.focus, a:active:focus, .close:focus, .close:active, .close.focus, .close:active:focus { outline: 0px none; }
+
+.form {
+    position: absolute;
+    left: 50%; top:450px;
+    margin-left: -200px;
+    margin-top: -210px;
+}
+
+.form-bg {
+    background: rgb(238, 238, 238) ;
+    opacity: 0.6;
+    width: 400px;
+    height: 270px;
+
+}
+/*.yaoshi1{
+    position:absolute;
+    width:100px;
+    height:100px;
+    left:30.5%;
+    top:29%;
+    background:url('../images/yaoshi1.png');
+ }
+.yaoshi{
+    position:absolute;
+    width:107px;
+    height:104px;
+    left:63%;
+    top:30%;
+    background:url('../images/yaoshi.png');
+
+}
+*/
+.form-inner {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top:20px;
+    z-index: 9;
+    padding: 28px 50px 0px;
+}
+.form-inner .form-control {
+   /* border-color: transparent;*/
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+}
+.input-label {
+    background: #00A796;
+    color: rgb(255, 255, 255);
+    border-color: transparent;
+    border-radius: 3px;
+}
+.form-control {
+    position: static ! important;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.btn-lg {
+    border-radius: 3px;
+}
+.find-reg{
+    position:relative;
+    top:45px;
+   margin-left:48%;
+}
+/*
+.top{
+
+    position:absolute;
+    width:800px;
+    height:100px;
+    background:url('../images/title2.png');
+}
+*/
+.top{
+    text-align: center;
+    width:100%;
+    height:260px;
+    color:white;
+
+    font-size: 45px;
+    line-height: 260px;
+}
+@media all and  (min-width: 1200px){
+
+}
+@media all and (min-width: 992px) and (max-width: 1199px){
+
+}
+@media all and (min-width: 768px) and  (max-width: 991px){
+
+}
+@media screen and (max-width: 767px){
+
+}
+#error{
+
+    text-align: center;
+    color:red;
+
+}

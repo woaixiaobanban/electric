@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <title>新闻页面</title>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <article class="contzk">
+            <div class="biaoti">${newsVo.newsTitle}</div>
+            <div class="shijian">
+                <span class="d_time">发布时间：${newsVo.createTime}</span>
+                &nbsp;&nbsp;<span>浏览（${newsVo.readTimes}）</span>
+            </div>
+            <div class="infos">
+                ${newsVo.newsContent}
+            </div>
+        </article>
+        <div class="fenye">
+            <div class="bb">
+                <p>
+                    <span>上一篇:</span>
+                    <a href="http://localhost:8081/electric/page/news.html?id=${news.newsId-1}">${newsVo.newsPreviousTitle}</a>
+                </p>
+                <p>
+                    <span>下一篇:</span>
+                    <a href="http://localhost:8081/electric/page/news.html?id=${news.newsId+1}">${newsVo.newsNextTitle}</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

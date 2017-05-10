@@ -1,0 +1,78 @@
+
+#myChartTab{
+    margin-top: 15px;
+}
+#myChartTab li{
+    width: 25%;
+    text-align: center;
+    font-family: "微软雅黑", "Microsoft Yahei";
+    font-size: 14px;
+}
+.chart{
+    width: 900px;
+    height: 400px;
+    margin:0 auto;
+    margin-top: 10px;
+}
+/*------饼状图------*/
+#pContainer,#wpContainer,#mpContainer,#ypContainer{
+    float: left;
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+}
+/*----表格---*/
+#dConsume,#wConsume,#mConsume,#yConsume{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50%;
+    height: 280px;
+    float: left;
+}
+#dConsume>tbody>tr>td,
+#dConsume>tbody>tr>th,
+#dConsume>tfoot>tr>td,
+#dConsume>tfoot>tr>th,
+#dConsume>thead>tr>td,
+#dConsume>thead>tr>th{
+    text-align: center;
+    height:1.42857143;
+    line-height: 1.42857143;
+}
+#wConsume>tbody>tr>td,
+#wConsume>tbody>tr>th,
+#wConsume>tfoot>tr>td,
+#wConsume>tfoot>tr>th,
+#wConsume>thead>tr>td,
+#wConsume>thead>tr>th{
+    text-align: center;
+    height:1.42857143;
+    line-height: 1.42857143;
+}
+#mConsume>tbody>tr>td,
+#mConsume>tbody>tr>th,
+#mConsume>tfoot>tr>td,
+#mConsume>tfoot>tr>th,
+#mConsume>thead>tr>td,
+#mConsume>thead>tr>th{
+    text-align: center;
+    height:1.42857143;
+    line-height: 1.42857143;
+}
+#yConsume>tbody>tr>td,
+#yConsume>tbody>tr>th,
+#yConsume>tfoot>tr>td,
+#yConsume>tfoot>tr>th,
+#yConsume>thead>tr>td,
+#yConsume>thead>tr>th{
+    text-align: center;
+    height:1.42857143;
+    line-height: 1.42857143;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #EEEEEE;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}

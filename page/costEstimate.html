@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <link href="../css/bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/costEstimate.css">
+    <script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/bootstrap/moment-with-locales.min.js"></script>
+    <script src="../js/bootstrap/bootstrap-datetimepicker.js"></script>-->
+    <script src="../js/costEstimate.js"></script>
+    <title>电费预估</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon"><i class="icon-home icon-large"></i>当前位置>><span>电费预估</span></div>
+        <div class="top_2017">
+            <p class="jiaofeixinxi">电费预估</p>
+            <a class="fanhui" href="#" target="_blank">交费历史</a>
+        </div>
+        <div class="estmate">
+            <div class="limit col-sm-offset-4">可选范围:&nbsp;&nbsp;&nbsp;
+                <span id="limitStart">2017-04-03 11:10:52</span>&nbsp;<b>————</b>
+                <span id="limitEnd">2017-04-29 11:10:52</span>
+            </div>
+            <form role="form" class="timeSE">
+                <div class="form-group">
+                    <label class="control-label col-sm-2 col-sm-offset-2" for="sDatetimepicker">开始时间：</label>
+                    <div class='input-group date col-sm-4' id='sDatetimepicker'>
+                        <input type='text' class="form-control"/>
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2 col-sm-offset-2" for="eDatetimepicker">结束时间：</label>
+                    <div class='input-group date col-sm-4' id='eDatetimepicker'>
+                        <input type='text' class="form-control"/>
+                        <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <div class="est col-sm-offset-5">
+                <button id="est" class="btn btn-primary btn-sm col-sm-2 estimateB"  data-toggle="modal" data-target="#estimate">预估</button>
+            </div>
+            <div class="lishijiaofei">
+                <h3>您的历史交费</h3>
+                <table class="table table-bordered" id="lishi">
+                    <thead>
+                        <tr>
+                            <th>电表编号</th>
+                            <th>客户名称</th>
+                            <th>用电地址</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B502</td>
+                            <td>bantingting</td>
+                            <td>中国海洋大学</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="estimate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">预估能耗</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-model" id="estTable">
+                        <tbody>
+                        <tr>
+                            <td>预估能耗</td>
+                            <td id="degree"><span></span>&nbsp;度</td>
+                        </tr>
+                        <tr>
+                            <td>预估费用</td>
+                            <td id="money"><span></span>&nbsp;元</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function () {
+        $('#sDatetimepicker').datetimepicker({
+            format: 'YYYY-MM-DD hh:mm:ss',
+            locale: moment.locale('zh-cn')
+        });
+        $('#eDatetimepicker').datetimepicker({
+            format: 'YYYY-MM-DD hh:mm:ss',
+            locale: moment.locale('zh-cn')
+        });
+    });
+</script>
+</body>
+</html>

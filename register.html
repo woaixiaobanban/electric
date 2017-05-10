@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="renderer" content="webkit">
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="css/reg2.css" media="all">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery/messages_zh.js"></script>
+    <style type="text/css">
+        label{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="top"><div class="title">欢迎注册</div></div>
+<div class="form ">
+    <div class="form-inner">
+        <form  action="login.html" method="post" id="register_form" role="form" onsubmit="check();return false;">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <span class="input-group-addon input-label" ><span class="	glyphicon glyphicon-user"></span></span>
+                        <input value="" class="form-control require" id="username" name="username"   maxlength="20" type="text" placeholder="请输入用户名" onblur="checkUsername()">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                      <label id="warning-username" class="warning" ></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <!--    <span class="vh">&nbsp;&nbsp;</span>-->
+                        <span class="input-group-addon input-label" ><span class="	glyphicon glyphicon-lock"></span></span>
+                        <input class="form-control require" id="password" name="password"  type="password" placeholder="请输入密码"  maxlength="20" onblur="checkPassword()" >
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <label id="warning-password" class="warning"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <span class="input-group-addon input-label" ><span class="glyphicon glyphicon-repeat"></span></span>
+                        <input  class="form-control require confirm" id="confirm_password" name="confirm_password"  type="password" placeholder="确认密码"  maxlength="20" onblur="checkConfirm()"  >
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <label id="warning-confirm" class="warning"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <!--    <span class="vh">&nbsp;&nbsp;</span>-->
+                        <span class="input-group-addon input-label" ><span class="	glyphicon glyphicon-phone"></span></span>
+                        <input class="form-control require" id="phone" name="phone"  type="phone" placeholder="请输入手机号" maxlength="20" onblur="checkPhone()">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <label id="warning-phone" class="warning"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <!--    <span class="vh">&nbsp;&nbsp;</span>-->
+                        <span class="input-group-addon input-label" ><span class="glyphicon glyphicon-envelope"></span></span>
+                        <input class="form-control require" id="email" name="email"  type="email" placeholder="请输入邮箱"  maxlength="20" onblur="checkEmail()">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <label id="warning-email" class="warning"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                    <div class="input-group">
+                        <span class="input-group-addon input-label" ><span class="glyphicon glyphicon-home"></span></span>
+                        <input value="" class="form-control require" id="address" name="address"  type="text" placeholder="请输入家庭住址" maxlength="20" onblur="checkAddress()">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <label id="warning-address" class="warning"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+
+                <span style="margin-right:30px;">
+                    <input type="checkbox" id="read" name="read" checked>同意
+                </span>
+                <a href=""  data-toggle="modal" data-target="#myModal">用户协议</a>
+
+            </div>
+            <div class="btn-register">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-2">
+                <button class="btn btn-block" id="register" type="submit" >立即注册</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

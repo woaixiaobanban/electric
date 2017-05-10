@@ -1,0 +1,69 @@
+.container{
+    min-width: 1200px;
+}
+#Carousel{
+    margin-top: 5px;
+}
+#icon-two,#icon-three{
+    margin-top: 8px;
+    height: 15px;
+}
+.hr{
+    margin-left:5%;
+}
+.team_hr{
+    width: 44%;
+    float: left;
+    border: 1px solid #cccccc;
+}
+#icon-two span,#icon-three span{
+    float: left;
+    margin-top: 10px;
+    padding:0 4px;
+}
+.qywh{
+    margin-top: 28px;
+    height: 300px;
+}
+.qywh ul{
+    font-size: 13px;
+    font-family: "微软雅黑","Arial";
+    width:86%;
+    margin:0 auto;
+}
+.qywh ul li {
+    width: 232px;
+    height: 280px;
+    background: url(../images/qi.png) no-repeat;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    padding-top: 86px;
+}
+.qywh ul li h2 {
+    font-weight: normal;
+    font-size: 16px;
+    color: #333;
+    background: url(../images/qiheng.jpg) no-repeat bottom center;
+    padding-bottom: 10px;
+    margin-bottom: 13px;
+}
+.qywh ul li:hover{
+    color: white;
+    background: url(../images/qi2.png) no-repeat;
+}
+.qywh ul li:hover>h2{
+    color: white;
+}
+/*--关于--*/
+.about{
+    clear: both;
+    width: 86%;
+    height: 150px;
+    margin-left:7%;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "微软雅黑", "Microsoft Yahei";
+    line-height: 25px;
+    text-indent: 25px;
+}

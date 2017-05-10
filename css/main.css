@@ -1,0 +1,154 @@
+@import "cssreset.css";
+.btn-primary{
+    background-color: #00A796;
+    border: 1px solid #00A796;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #41C5BE;
+    border: 1px solid #41C5BE;
+}
+/*---当前位置----*/
+.icon{
+    font-size: 14px;
+    font-family: "微软雅黑", "Microsoft Yahei";
+}
+.icon>span{
+    color: #00A796;
+}
+/*-----导航头部-----*/
+.nav-bg-1 {
+    /*background: url(../images/nav-bg.png) repeat-x;*/
+    width: 100%;
+    height: 87px;
+    position: relative!important;
+    top: 0px;
+}
+.nav-bg {
+    /*background: url(../images/nav-bg.png) repeat-x;*/
+    width: 100%;
+    min-width: 1200px;
+    height: 87px;
+    position: relative;
+    top: 0;
+}
+.containe {
+    width: 100%;
+    min-width: 1200px;
+}
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.fix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+}
+.header{
+    width: 95%;
+    height: 87px;
+    margin:0 auto;
+}
+.logo {
+    float: left;
+    margin-top: 11px;
+}
+li#userCon {
+    padding-top: 20px;
+
+}
+a.dropdown-toggle {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+}
+.nav .open>a:focus,.nav .open>a:hover{
+    background-color: #E8E8E8;
+}
+.en-ch {
+    float: right;
+    width: 115px;
+    text-align: center;
+    line-height: 87px;
+}
+/*----导航---*/
+.navigation-elc{
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+
+    z-index: -99;
+}
+.navbar-nav{
+    width: 100%;
+    background: url("../images/header.png") no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.navbar-nav>li{
+    width:20%;
+}
+.navbar-nav>li a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-family: "微软雅黑", "Microsoft Yahei";
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus{
+    color: white;
+    background-color: #41C5BE;
+}
+/*-----modal----*/
+.modal-title{
+    text-align: center;
+    font-size: 1.2em;
+}
+/*去除表格线*/
+#infoTable>tbody>tr>td,
+#infoTable>tbody>tr>th,
+#infoTable>tfoot>tr>td,
+#infoTable>tfoot>tr>th,
+#infoTable>thead>tr>td,
+#infoTable>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid transparent;
+    font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+}
+#infoTable>tbody>tr>td:first-child{
+    padding-top: 22px;
+    font-size: 1.2em;
+    width:30%;
+    text-align: center;
+}
+#infoTable>tbody>tr>td:nth-child(2){
+    padding-top: 18px;
+    font-size: 1.2em;
+    width: 40%;
+}
+#infoTable>tbody>tr>td:nth-child(3){
+    padding-top: 22px;
+    font-size: 1.2em;
+    color: red;
+}
+.form-control{
+    width: 90%;
+}
+.modify{
+    margin-left: 40%;
+}
+#notice{
+    color: red;
+    font-size: 1.2em;
+    margin-left: 40%;
+}

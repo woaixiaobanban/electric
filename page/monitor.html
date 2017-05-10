@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <!--  <script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/bootstrap/moment-with-locales.min.js"></script>
+    <script src="../js/bootstrap/bootstrap-datetimepicker.js"></script>
+    <script src="../js/bootstrap/bootstrap-paginator.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <link href="../css/bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/monitor.css">-->
+    <script src="../js/monitor.js"></script>
+    <title>实时监测</title>
+</head>
+<body>
+    <!--实时监测-->
+    <div class="container">
+        <div class="icon"><i class="icon-home icon-large"></i>&nbsp;&nbsp;当前位置>><span>实时监控</span></div>
+        <div class="pdDiv">
+            <div class="form-inline">
+                <div class="form-group">
+                    <!--选择房间-->
+                    <select class="selectpicker" id="roomSelect" data-size="5">
+                        <option value="0" selected>所有</option>
+                        <c:forEach items="${room.list}" var ="r">
+                            <option value="${r.id}">${r.id}</option>
+                            <!--此项option为测试-->
+                            <!--<option value="B502">B502</option>-->
+                        </c:forEach>
+                    </select>
+                </div>
+                <div class="form-group" id="timeOne">
+                    <label for="datetimepickerOne" class="control-label">选择日期时间:</label>
+                    <!--指定 date标记-->
+                    <div class='input-group date' id='datetimepickerOne'>
+                        <input type='text' id="selectTime" class="form-control"/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-sm" id="search" >查询</button>
+                </div>
+            </div>
+        </div>
+        <div class="div-2 div-add-13 fix">
+            <div class="div-10 fix">
+                <table class="table table-striped" id="infoEnergy">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>设备名</th>
+                        <th>电表编号</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>电流值</th>
+                        <th>电压值</th>
+                        <th>实时能耗(度)</th>
+                        <th>短暂功率</th>
+                        <!--<th>历史能耗</th>-->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--显示所有的信息-->
+                    <c:forEach items="${elec.list}" var="e" varStatus="i">
+                        <tr class="hideTd" style="display:none">
+                            <td style="text-align: center" colspan="9">没有相关的记录</td>
+                        </tr>
+                        <tr class="elec-item">
+                            <!--遍历到第几个元素-->
+                            <td>${i.count}</td>
+                            <td>${e.name}</td>
+                            <td>B502</td>
+                            <td>${e.startTime}</td>
+                            <td>${e.endTime}</td>
+                            <td>${e.elec}</td>
+                            <td>${e.vol}</td>
+                            <!--<td>${e.voltage}</td>-->
+                            <td>
+                                <c:set value="${e.elec * e.voltage}"></c:set>
+                            </td>
+                            <td>${e.moment}</td>
+                           <!-- <td>
+                                &lt;!&ndash;查看历史能耗&ndash;&gt;
+                                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#historyEnergy" onclick="showEnergy('${e.id}')">查看</button>
+                            </td>-->
+                        </tr>
+                        <!--此项tr为测试---->
+                        <tr class="elec-item">
+                            <!--遍历到第几个元素-->
+                            <td>2</td>
+                            <td>${e.name}</td>
+                            <td>B504</td>
+                            <td>2017-04-18 08:57:00</td>
+                            <td></td>
+                            <td>2.4</td>
+                            <td>3.6</td>
+                            <td>
+                                <c:set value="${e.elec * e.voltage}"></c:set>
+                            </td>
+                            <td>13.4</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="pull-right">
+            <ul id ="paginator"></ul>
+        </div>
+    </div>
+    <!--弹出模态框-->
+    <div class="modal fade" id="historyEnergy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="text-align: center;" id="myModalLabel">历史能耗信息</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-model" id="eachEnergy">
+                        <tbody>
+                        <tr>
+                            <td>开始时间:</td>
+                            <td id="startTime"></td>
+                        </tr>
+                        <tr>
+                            <td>结束时间:</td>
+                            <td id="endTime"></td>
+                        </tr>
+                        <tr>
+                            <td>能耗:</td>
+                            <td id="energy"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/*---查询---*/
+.btn-primary{
+    background-color: #00A796;
+}
+.pdDiv{
+    margin-top: 15px;
+}
+.selectpicker{
+    height: 30px;
+    padding: 2px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#timeOne{
+    margin-left: 10px;
+}
+#infoEnergy>tbody>tr>td,
+ #infoEnergy>tbody>tr>th,
+ #infoEnergy>tfoot>tr>td,
+ #infoEnergy>tfoot>tr>th,
+ #infoEnergy>thead>tr>td,
+ #infoEnergy>thead>tr>th {
+     height:1.42857143;
+     line-height: 1.42857143;
+     vertical-align: top;
+     text-align: center;
+ }
+#infoEnergy>thead>tr>th:nth-child(3){
+    width: 15%;
+}
+#infoEnergy>tbody>tr>td:nth-child(4){
+    width:15%;
+}
+/*---弹出能耗框---*/
+#eachEnergy>tbody>tr>td,
+#eachEnergy>tbody>tr>th,
+#eachEnergy>tfoot>tr>td,
+#eachEnergy>tfoot>tr>th,
+#eachEnergy>thead>tr>td,
+#eachEnergy>thead>tr>th {
+    border-top: 0px solid transparent;
+}
+.div-2{
+    margin-top: 8px;
+}
+

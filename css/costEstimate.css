@@ -1,0 +1,83 @@
+body{
+    background:#e6eded;
+}
+.container{
+    min-width: 1200px;
+}
+.estmate{
+    background:#ffffff;
+    height: 480px;
+    width: 85%;
+    margin:0 auto;
+    /*margin-top: 15px;*/
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+/*--top---*/
+.top_2017 {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dddddd), color-stop(1, #fafafa));
+    background: -ms-linear-gradient(bottom, #dddddd, #fafafa);
+    background: -moz-linear-gradient(center bottom, #dddddd 0%, #fafafa 100%);
+    background: -o-linear-gradient(bottom, #dddddd, #fafafa);
+    height: 52px;
+    overflow: hidden;
+    width: 85%;
+    font-size: 16px;
+    color: black;
+    line-height: 52px;
+    padding: 0 27px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.timeSE{
+    margin-top: 20px;
+    border-top: 1px dashed #dddddd;
+    padding-top: 20px;
+}
+.timeSE .control-label{
+    padding-top: 5px;
+}
+.limit {
+    margin-top: 16px;
+    font-size: 14px;
+}
+.est{
+    margin-top: 15px;
+    height: 40px;
+}
+.estimateB>a{
+    text-decoration: none;
+    color: white;
+}
+#estTable>tbody>tr>td,
+#estTable>tbody>tr>th,
+#estTable>tfoot>tr>td,
+#estTable>tfoot>tr>th,
+#estTable>thead>tr>td,
+#estTable>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid transparent;
+}
+/*----交费历史---*/
+.lishijiaofei>h3{
+    font-size: 16px;
+    text-align: left;
+    padding: 24px 0 24px 12px;
+    border-top: 1px dashed #dddddd;
+    color: #454545;
+}
+#lishi{
+    width:80%;
+    margin: 0 auto;
+}
+#lishi>thead>tr>th{
+    background: rgb(242, 247, 247, 1);
+}
+#lishi>thead>tr>th,
+#lishi>tbody>tr>td{
+    text-align: center;
+}

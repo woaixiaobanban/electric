@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+   <!-- <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/energyConsume.css">
+    <script type="text/javascript" src="../js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="../js/highcharts/highcharts-more.js"></script>
+    <script type="text/javascript" src="../js/energyConsume.js"></script>
+    <link rel="stylesheet" href="../css/monitor.css">-->
+</head>
+<body>
+    <div class="container">
+        <div class="icon"><i class="icon-home icon-large"></i>当前位置>><span>能耗费用</span></div>
+        <!--查询-->
+        <div class="pdDiv">
+            <!--选择房间-->
+            <select class="selectpicker" id="roomId" data-size="5">
+                <option value="0" selected>请选择电表编号</option>
+                <c:forEach items="${room.list}" var ="r">
+                    <option value="${r.id}">${r.id}</option>
+                </c:forEach>
+            </select>
+            <button class="btn btn-primary btn-sm"  onclick="eSearch();">查询</button>
+        </div>
+        <!--图表-->
+        <ul id="myChartTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#day" data-toggle="tab">day</a>
+            </li>
+            <li>
+                <a href="#week" data-toggle="tab">week</a>
+            </li>
+            <li>
+                <a href="#month" data-toggle="tab">month</a>
+            </li>
+            <li>
+                <a href="#year" data-toggle="tab">year</a>
+            </li>
+        </ul>
+        <div id="myChartTabContent" class="tab-content">
+            <!--day-->
+            <div class="tab-pane fade in active" id="day">
+                <div id="dContainer" class="chart"></div>
+                <!--饼状图-->
+                <div id="pContainer" class="pieChart"></div>
+                <table class="table table-bordered table-striped" id="dConsume">
+                    <thead>
+                    <tr>
+                        <th>电器类型</th>
+                        <th>能耗(KW/h)</th>
+                        <th>费用(0.8元/度)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!--week-->
+            <div class="tab-pane fade" id="week">
+                <div id="wContainer" class="chart"></div>
+                <!--饼状图-->
+                <div id="wpContainer" class="pieChart"></div>
+                <table class="table table-bordered table-striped" id="wConsume">
+                    <thead>
+                    <tr>
+                        <th>电器类型</th>
+                        <th>能耗(KW/h)</th>
+                        <th>费用(0.8元/度)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!--month-->
+            <div class="tab-pane fade" id="month">
+                <div id="mContainer" class="chart"></div>
+                <!--饼状图-->
+                <div id="mpContainer" class="pieChart"></div>
+                <table class="table table-bordered table-striped" id="mConsume">
+                    <thead>
+                    <tr>
+                        <th>电器类型</th>
+                        <th>能耗(KW/h)</th>
+                        <th>费用(0.8元/度)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!--year-->
+            <div class="tab-pane fade" id="year">
+                <div id="yContainer" class="chart"></div>
+                <!--饼状图-->
+                <div id="ypContainer" class="pieChart"></div>
+                <table class="table table-bordered table-striped" id="yConsume">
+                    <thead>
+                    <tr>
+                        <th>电器类型</th>
+                        <th>能耗(KW/h)</th>
+                        <th>费用(0.8元/度)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

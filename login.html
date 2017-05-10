@@ -1,0 +1,56 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="renderer" content="webkit">
+    <title>登录</title>
+    <script type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/jquery/messages_zh.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/login.css" media="all">
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#regForm").validate();
+        });
+    </script>
+    <style type="text/css" >
+
+    </style>
+</head>
+<body>
+<div class="top">
+    用电信息监测与管理系统
+</div>
+<div class="form regform">
+    <div class="form-bg"></div>
+    <div class="form-inner">
+        <form method="post" id="regForm" method="post"  role="form">
+            <div class="input-group">
+                <span class="input-group-addon input-label">用&nbsp;户&nbsp;名</span>
+                <input value="" class="form-control require" id="username" name="username"  type="text" >
+            </div>
+            <div class="input-group">
+            <!--    <span class="vh">&nbsp;&nbsp;</span>-->
+                <span class="input-group-addon input-label">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+                <input class="form-control require" id="password" name="password"  type="password">
+            </div>
+            <div class="last">
+                <input onclick="adminLogin();return false;" class="btn btn-primary btn-block btn-lg" id="login_sub" value="登录" type="submit" >
+            </div>
+            <div class="find-reg">
+                <a href="register.html" target="_blank"><span style="margin-right:56px;">注册</span></a><a href="findpwd1.html"><span>忘记密码？</span></a>
+            </div>
+            <div id="error" style="display:none;">
+              <img src="images/error.png" alt="" width="22" height="22">
+                <label id="error-message"></label>
+            </div>
+        </form>
+      <!--  <p class="alert alert-info register">找回密码 <a href="#"></a> </p>-->
+    </div>
+
+<!--<div class="yaoshi"></div>-->
+</div>
+</body>
+</html>

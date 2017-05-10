@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/findpwd.css">
+    <script type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/findPwd.js"></script>
+    <title>找回密码</title>
+</head>
+<body>
+<div class="main">
+    <div class="top"></div>
+    <div class="content">
+        <div class="title">找回账号密码</div>
+        <form id="msform" role="form" class="form-horizontal" action="findpwd3.html" onsubmit="return findPwd2();" >
+            <div class="fieldset-main">
+                <fieldset class="fieldset second">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                            <div class="input-group">
+                                <span class="input-group-addon input-label" ><span class="	glyphicon glyphicon-lock"></span></span>
+                                <input type="text" id="newPwd" class="form-control" value="" placeholder="请输入新密码">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+                            <div class="input-group">
+                                <span class="input-group-addon input-label" ><span class="glyphicon glyphicon-repeat"></span></span>
+                                <input type="text" id="confirmPwd" class="form-control" value="" placeholder="确认密码">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                        <div class="col-md-6 col-xs-12 col-md-offset-3 ">
+                            <label id="findPwd2"></label>
+                        </div>
+
+                    <div class="form-group form-next-second">
+                        <div class="col-md-6 col-xs-12 col-md-offset-3 ">
+                            <button class="form-control btn-next btn-next-second findPwd" type="submit" >确定</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

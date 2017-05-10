@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">-->
+    <title>首页</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon"><i class="icon-home icon-large"></i>&nbsp;&nbsp;当前位置>><span>首页</span></div>
+        <!--轮播滑动-->
+        <div id="Carousel" class="carousel slide" data-interval="2000">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#Carousel" data-slide-to="1"></li>
+                <li data-target="#Carousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="../images/banner2.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="../images/banner2.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="../images/banner3.jpg" alt="Third slide">
+                </div>
+            </div>
+        </div>
+        <div class="icon" id="icon-two">
+            <div class="hr">
+                <hr class="team_hr"/>
+                <span>用电介绍</span>
+                <hr class="team_hr"/>
+            </div>
+        </div>
+        <div class="qywh">
+            <ul>
+                <li>
+                    <h2>用电<b>愿景</b></h2>
+                    <p>致力于为每位顾客提供<br>
+                        最优质的服务
+                    </p>
+                </li>
+                <li>
+                    <h2>用电<b>愿景</b></h2>
+                    <p>致力于为每位顾客提供<br>
+                        最优质的服务
+                    </p>
+                </li>
+                <li>
+                    <h2>用电<b>愿景</b></h2>
+                    <p>致力于为每位顾客提供<br>
+                        最优质的服务
+                    </p>
+                </li>
+                <li>
+                    <h2>用电<b>愿景</b></h2>
+                    <p>致力于为每位顾客提供<br>
+                        最优质的服务
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="icon" id="icon-three">
+            <div class="hr">
+                <hr class="team_hr"/>
+                <span>关于我们</span>
+                <hr class="team_hr"/>
+            </div>
+        </div>
+        <div class="about">
+            在您的持续大力支持下，国家电网高速公路快充网络建设快速推进，至2016年底已建成以“六纵六横二环”高速公路为骨干网架的高速公路快充网络，详细站点分布见附图。
+            获取详细信息敬请访问国家电网“e充电”互动网站（网址：www.echargenet.com）。也可垂询统一客户服务热线：95598（拨95598-1-7），更加详细说明见与本公告一同发布的《国家电网高速公路快充网络服务指南（2017年版）》。
+            亲爱的朋友们，我们将以更专业化的服务，让您的爱车畅通无阻，欢迎您使用并多提宝贵意见和建议。感谢您对我们一如既往的关注和支持！
+        </div>
+    </div>
+<script>
+    $(function () {
+        $('#Carousel').carousel('cycle')
+    })
+</script>
+</body>
+</html>

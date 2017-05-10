@@ -1,0 +1,265 @@
+html,body{
+    width:100%;
+    height:100%;
+    font-size: 16px;
+}
+.main{
+    width: 100%;
+    height: 100%;
+
+}
+/*header---------头部*/
+/*-------form表单--------*/
+#msform{
+    width:100%;
+    height:80%;
+
+}
+/*-------表单输入项-------------*/
+
+#msform fieldset:not(:first-of-type){
+    display: none;
+}
+/*-------------按钮-------------*/
+/*验证码*/
+/*----------适配不同的屏幕--------------*/
+#msform button:hover,#msform button:focus{
+
+}
+/*输入框高度*/
+.form-control,.input-group{
+    height:45px;
+}
+/*下一步*/
+.btn-next-second,.btn-next-first{
+    background-color:#00A796;
+    color: white;
+    font-family: "微软雅黑", "Microsoft Yahei";
+    font-size: 1.0em;
+    border:1px solid #00A796;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+.fieldset .form-next,fieldset .form-next-second{
+    margin-top: 4%;
+}
+
+/*-----头部ul li-------*/
+#progressbar{
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+#progressbar li{
+    list-style-type: none;
+    color: white;
+    width: 33%;
+    float: left;
+    position: relative;
+    font-size: 0.8em;
+    text-align: center;
+    font-family: "微软雅黑", "Microsoft Yahei";
+}
+#progressbar li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 32px;
+    line-height: 32px;
+    display: block;
+    font-size: 0.8em;
+    color: #333;
+    background: white;
+    border-radius: 50%;
+    margin: 48px auto 5px auto;
+}
+@media all and  (max-width: 320px){
+    #progressbar li:after{
+        content: '';
+        width:66%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -32%;
+        top: 62px;
+    }
+    .message{
+        font-size:15px;
+    }
+    .title{
+        height:80px;
+        line-height: 120px;
+        font-size: 15px;
+    }
+}
+@media all and (min-width: 321px) and (max-width: 375px){
+    #progressbar li:after{
+        content: '';
+        width: 75%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -36%;
+        top: 62px;
+    }
+    .message{
+        font-size:15px;
+    }
+    .title{
+        height:90px;
+        line-height: 90px;
+        font-size: 15px;
+    }
+
+}
+@media all and (min-width: 376px) and  (max-width: 480px){
+    #progressbar li:after{
+        content: '';
+        width: 78%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -39%;
+        top: 62px;
+    }
+    .message{
+        font-size:20px;
+    }
+    .title{
+        height:100px;
+        line-height: 100px;
+        font-size: 15px;
+    }
+}
+@media all and (min-width: 481px) and (max-width: 768px){
+    #progressbar li:after{
+        content: '';
+        width: 90%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -43%;
+        top: 62px;
+    }
+    .message{
+        font-size:20px;
+    }
+    .title{
+        height:120px;
+        line-height: 120px;
+        font-size: 20px;
+    }
+}
+@media all and  (min-width: 769px){
+    #progressbar li:after{
+        content: '';
+        width: 95%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -46%;
+        top: 62px;
+    }
+    .title{
+        height:120px;
+        line-height: 120px;
+        font-size: 30px;
+    }
+.message{
+    font-size:30px;
+}
+
+}
+#progressbar li:first-child:after{
+    content: none;
+}
+#progressbar li.active:before,#progressbar li.active:after{
+    background: red;
+    color: white;
+}
+/*----------底部-----------*/
+
+.socila-login{
+    margin-bottom: 10px;
+}
+.message{
+    text-align: center;
+
+
+
+}
+.top{
+    width:100%;
+    height:50%;
+    background: -webkit-linear-gradient(#00A796, white); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#00A796, white); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#00A796, white); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#00A796, white);
+    color:white;
+}
+
+.warning{
+
+    position:relative;
+    top:10px;
+
+}
+.content{
+    position: absolute;
+    width: 55%;
+    left:22.5%;
+    height: 500px;
+    top:15%;
+    background-color: #f2f2f2;
+    border:1px solid #d9d9d9;
+}
+.title{
+
+    color: #007062;
+    text-align: center;
+
+    border-bottom:1px solid #e5e5e5;
+    background-color: white;
+}
+.fieldset-main{
+    position:relative;
+    top:15%;
+}
+.fanhui{
+    background-color:#00A796;
+    color: white;
+    font-family: "微软雅黑", "Microsoft Yahei";
+    font-size: 1.0em;
+    border:1px solid #00A796;
+    position:relative;
+    margin-top:18%;
+    height:45px;
+
+}
+.time-message{
+    text-align: center;
+    position:relative;
+    margin-top:5%;
+
+}
+.findPwd{
+    height: 45px;
+    background-color:#00A796;
+    color: white;
+    font-size: 18px;
+    font-family: "微软雅黑", "Microsoft Yahei";
+}
+.findPwd:hover{
+    height: 45px;
+    background-color:#41C5BE;
+    color: white;
+}
+label#findPwd2{
+    color:red;
+    font-size: 15px;
+}
+label{
+    color:red;
+
+}

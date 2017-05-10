@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<script src="../js/jquery/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/information.css">
+    <script src="../js/information.js"></script>-->
+    <title>消息通知</title>
+</head>
+<body>
+    <div class="container xzlist">
+        <!--当前位置-->
+        <div class="icon"><i class="icon-home icon-large"></i>当前位置>><span>消息通知</span></div>
+        <div class="inform">
+            <i class="icon-comments-alt icon-large"></i>&nbsp;&nbsp;
+            <span id="alertInform">消息提醒</span>
+            <!--前台获取数据库设置的用电额度，然后获取当前用电额度，进行比较-->
+            <span id="deLimit" style="display: none">${degree.limit}</span>
+            <span id="deCurrent" style="display: none">${degreeCurrent}</span>
+            <span id="aleinfo" style="display: none;color: red;">用电超过用电额度！</span>
+            <button class="btn btn-warning pull-right"  data-toggle="modal" data-target="#inform">设置用电额度提醒</button>
+        </div>
+        <br>
+        <!--主体信息-->
+        <span id="info_title">消息标题</span>
+        <span id="info_time" class="pull-right">新闻时间</span>
+        <ul>
+            <li>
+                <a href="http://localhost:8081/electric/page/news.html?id=0754" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="">【04.13】经济新常态下电力市场特征及公司适应策略…</a>
+                <span class="list_time">2017-04-13&nbsp;周四14:00</span>
+            </li>
+        </ul>
+        <c:forEach items="${newsList}" var="news">
+            <ul>
+                <li>
+                    <a href="http://localhost:8081/electric/page/news.html?id=${news.newsId}" target="_blank" style="">${news.title}</a>
+                    <span class="list_time">${news.time}</span>
+                </li>
+            </ul>
+        </c:forEach>
+    </div>
+    <div class="modal fade" id="inform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" style="text-align: center;" id="myModalLabel">用电费用提醒</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-model" id="inform_table">
+                        <tbody>
+                        <tr>
+                            <td>设置额度:<input type="text" id="num">度</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary" id="inform_con" onclick="setDegree();">确定</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
